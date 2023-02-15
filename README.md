@@ -46,4 +46,4 @@ If you want to control the step values, you can open the [Raspberry Pi Debug Int
 
 ![rnbo runner debug interface](./rpi-debug-interface-params.png)
 
-[^1]: this is a general approximate resistor value for these current limiting resistors (without them, you can burn out your pins on your RPi or blow the LEDs) if you really want to be precise, this tool from digikey is really handy.
+[^1]: this is a general approximate resistor value for these current limiting resistors (without them, you can burn out your pins on your RPi or blow the LEDs) if you really want to be precise, [this tool from digikey](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-led-series-resistor) is really handy.
