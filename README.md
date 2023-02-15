@@ -29,6 +29,8 @@ pip install pyliblo3
 
 Now `sudo poweroff` the RPi, and disconnect the power. Let's create our circuit:
 
+![Fritzing Diagram](./RNBO-RPi-LEDseq.png)
+
 ## Running the script
 Power up the Pi again and run the script
 
@@ -36,8 +38,12 @@ Power up the Pi again and run the script
 python RNBO-RPi-LEDseq.py
 ```
 
-The script will start the transport rolling, you should be able to turn the transport on and off using the button. Try using `rnbo.remote` to toggle the transport also - you should see the state reflected in the `attrui` whether you use the button or the toggle.
+The script will start the transport rolling, you should be able to turn the transport on and off using the button. Try using [`rnbo.remote`](https://rnbo.cycling74.com/objects/ref/rnbo.remote) to toggle the transport also - you should see the state reflected in the `attrui` whether you use the button or the toggle.
 
-If you want to control the step values, you can open the Raspberry Pi Debug Interface to control the parameters.
+![rnbo.remote](rnbo.remote.png)
+
+If you want to control the step values, you can open the [Raspberry Pi Debug Interface](https://rnbo-staging.cycling74.com/learn/raspberry-pi-debug-interface) to control the parameters.
+
+![rnbo runner debug interface](./rpi-debug-interface-params.png)
 
 [^1]: this is a general approximate resistor value for these current limiting resistors (without them, you can burn out your pins on your RPi or blow the LEDs) if you really want to be precise, this tool from digikey is really handy.
