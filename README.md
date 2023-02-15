@@ -13,6 +13,9 @@ You've just made your own desktop synthesizer with RNBO and the Raspberry Pi, yo
 * Hook up wires
 
 We'll start by exporting the following patcher to the Raspberry Pi target:​
+![](RNBOBasicSequencing.png)
+
+> Download [RNBO-RPi-LEDseq.maxpat](./RNBO-RPi-LEDseq.maxpat)
 
 We're going to use the LEDs to light up the current step of the sequence. If you've also got a momentary push button handy we'll add that as a little transport control start/stop button.
 
