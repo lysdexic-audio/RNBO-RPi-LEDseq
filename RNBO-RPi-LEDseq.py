@@ -53,7 +53,7 @@ leds = LEDBoard(17, 27, 22, 5, 6, 13, 19, 26)
 def toggle_transport():
     global transport_running
     transport_running = not transport_running
-    OSC.send(target, "/rnbo/jack/transport/rolling", transport_running)⁠
+    OSC.send(target, "/rnbo/jack/transport/rolling", transport_running)
 
 button.when_pressed = toggle_transport
 
