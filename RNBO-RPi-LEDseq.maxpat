@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 113.0, 640.0, 480.0 ],
+		"rect" : [ 59.0, 113.0, 565.0, 396.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,26 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-28",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "openTransport.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 338.0, 20.0, 160.0, 30.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-19",
 					"maxclass" : "newobj",
@@ -116,7 +136,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 147.0, 196.0, 183.0, 22.0 ],
-									"text" : "send parent::basicSeqLED6"
+									"text" : "send parent::basicSeqLED2"
 								}
 
 							}
@@ -783,7 +803,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 98.0, 149.0, 1126.0, 490.0 ],
+						"rect" : [ 1049.0, 355.0, 1126.0, 490.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -813,6 +833,33 @@
 						"assistshowspatchername" : 0,
 						"title" : "untitled",
 						"boxes" : [ 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbleusescolors" : 1,
+									"id" : "obj-5",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 235.5, 346.0, 223.0, 39.0 ],
+									"presentation_linecount" : 4,
+									"text" : "You could replace this synth with one of your own - or a drum machine.."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 159.5, 38.0, 150.0, 35.0 ],
+									"text" : "8 steps per bar = 1/8 = \n8th note sequencer"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-46",
 									"maxclass" : "newobj",
@@ -1108,36 +1155,6 @@
 													"rnbo_serial" : 1,
 													"rnbo_uniqueid" : "*~_obj-12",
 													"text" : "*~ 0.5"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-11",
-													"maxclass" : "newobj",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 95.0, 336.0, 61.0, 23.0 ],
-													"rnbo_classname" : "*~",
-													"rnbo_serial" : 2,
-													"rnbo_uniqueid" : "*~_obj-11",
-													"text" : "*~ 0.0125"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-18",
-													"maxclass" : "newobj",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 29.0, 336.0, 61.0, 23.0 ],
-													"rnbo_classname" : "*~",
-													"rnbo_serial" : 3,
-													"rnbo_uniqueid" : "*~_obj-18",
-													"text" : "*~ 0.0125"
 												}
 
 											}
@@ -2251,13 +2268,6 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-9", 0 ],
-													"source" : [ "obj-11", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-5", 0 ],
 													"source" : [ "obj-12", 0 ]
 												}
@@ -2304,13 +2314,6 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-9", 0 ],
-													"source" : [ "obj-18", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-19", 0 ]
 												}
@@ -2348,13 +2351,6 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-18", 0 ],
-													"source" : [ "obj-4", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-5", 1 ],
 													"source" : [ "obj-4", 1 ]
 												}
@@ -2362,7 +2358,14 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-11", 0 ],
+													"destination" : [ "obj-9", 0 ],
+													"source" : [ "obj-4", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-9", 0 ],
 													"source" : [ "obj-5", 0 ]
 												}
 
@@ -2410,7 +2413,7 @@
 										"bgfillcolor_autogradient" : 0.0
 									}
 ,
-									"patching_rect" : [ 67.5, 341.0, 149.0, 23.0 ],
+									"patching_rect" : [ 67.5, 354.0, 149.0, 23.0 ],
 									"rnbo_classname" : "p",
 									"rnbo_extra_attributes" : 									{
 										"receivemode" : "local",
@@ -2784,7 +2787,7 @@
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 31.0, 30.0, 113.0, 23.0 ],
 									"rnbo_classname" : "phasor~",
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "phasor~_obj-6",
 									"text" : "phasor~ 1n @lock 1"
 								}
@@ -7316,6 +7319,12 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "openTransport.maxpat",
+				"bootpath" : "C74:/help/max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "untitled_20220925.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
 				"patcherrelativepath" : "../../Max 8/Snapshots",
