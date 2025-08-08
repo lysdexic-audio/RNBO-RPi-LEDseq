@@ -21,23 +21,34 @@ We're going to use the LEDs to light up the current step of the sequence. If you
 
 We'll write a quick python script on the Raspberry Pi to use alongside the rnbo runner that's running the sequencer patcher.
 
-ssh in, or connect up a keyboard and monitor. We'll use a library that should already be on your RPi image called `gpiozero` and another for communicating with the runner via OSC. You can use any OSC library you like, this example will use `pyliblo3`. We've used this library before - so if you've done this in a previous tutorial - you can skip this step.
+ssh in, or connect up a keyboard and monitor. We'll use a library that should already be on your RPi image called `gpiozero` and another for communicating with the runner via OSC. You can use any OSC library you like, this example will use `python-osc`.
 
-To install `pyliblo3` run the following two commands from the terminal on your RPi.
+Lets first create a working directory a python virtual environment by running these commands from your pi:
 
 ```bash
-sudo apt install liblo-dev
-pip install pyliblo3
+mkdir RNBO-LEDseq
+cd RNBO-LEDseq
+python -m venv .venv
 ```
+
+Now we'll enter the python venv and install some python dependencies:
+
+```bash
+source .venv/bin/activate
+pip install --upgrade pip gpiozero lgpio python-osc
+```
+
 
 Now `sudo poweroff` the RPi, and disconnect the power. Let's create our circuit:
 
 ![Fritzing Diagram](./RNBO-RPi-LEDseq.png)
 
 ## Running the script
-Power up the Pi again and run the script
+Power up the Pi again, ssh in and enter the python virtual env we created before and then run the script:
 
 ```bash
+cd RNBO-LEDseq
+source .venv/bin/activate
 python RNBO-RPi-LEDseq.py
 ```
 
